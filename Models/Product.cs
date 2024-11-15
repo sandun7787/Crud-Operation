@@ -6,6 +6,8 @@ namespace WebApplication1.Models
     public class Product
 
     {
+        internal object id;
+
         public int Id { get; set; }
 
         [MaxLength(100)]
