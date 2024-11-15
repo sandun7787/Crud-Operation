@@ -1,50 +1,43 @@
-# ASP.NET Core MVC CRUD Application with Entity Framework Core
+# ASP.NET Core MVC CRUD Operations with Entity Framework Core and Image Upload
 
-This repository demonstrates how to perform CRUD (Create, Read, Update, Delete) operations using **ASP.NET Core MVC** and **Entity Framework Core**. The application connects to a **SQL Server database** and includes functionality for image uploads.
-
----
+This project demonstrates how to perform CRUD (Create, Read, Update, Delete) operations in an ASP.NET Core MVC application using Entity Framework Core with a SQL Server database. Additionally, it includes functionality to upload and manage images.
 
 ## Table of Contents
-1. [Overview](#overview)
-2. [Features](#features)
-3. [Prerequisites](#prerequisites)
-4. [Setup Instructions](#setup-instructions)
-5. [CRUD Operations Guide](#crud-operations-guide)
-6. [Image Upload Functionality](#image-upload-functionality)
-7. [Technologies Used](#technologies-used)
-8. [License](#license)
-9. [Contact](#contact)
 
----
-
-## Overview
-This project showcases a simple yet functional web application built with the **Model-View-Controller (MVC)** architecture in ASP.NET Core. It uses **Entity Framework Core** for database operations and provides seamless integration with SQL Server. Users can manage records and upload images alongside the data.
-
----
-
-## Features
-- **CRUD Operations**: Add, view, edit, and delete records.
-- **SQL Server Integration**: Manage data using Entity Framework Core.
-- **Image Uploads**: Save images along with records to the server.
-- **Responsive Design**: User-friendly interface using **Bootstrap**.
+- [Prerequisites](#prerequisites)
+- [Setup and Configuration](#setup-and-configuration)
+- [Database Connection](#database-connection)
+- [CRUD Operations](#crud-operations)
+- [Image Upload](#image-upload)
+- [Running the Application](#running-the-application)
 
 ---
 
 ## Prerequisites
-Ensure the following software is installed on your system:
-- [Visual Studio 2022](https://visualstudio.microsoft.com/)
-- [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [Entity Framework Core Tools](https://learn.microsoft.com/en-us/ef/core/)
+
+Before getting started, ensure you have the following installed:
+
+1. [.NET Core SDK](https://dotnet.microsoft.com/download)
+2. [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+3. [Visual Studio](https://visualstudio.microsoft.com/) or any IDE of your choice
+4. [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
 
 ---
 
-## Setup Instructions
+## Setup and Configuration
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/<your-username>/<your-repository>.git
-cd <your-repository>
+1. **Create ASP.NET Core MVC Project**:
+   - Open Visual Studio and create a new project.
+   - Select **ASP.NET Core Web Application**.
+   - Choose the **Model-View-Controller (MVC)** template.
+
+2. **Add Entity Framework Core**:
+   Run the following commands in the Package Manager Console:
+   ```bash
+   Install-Package Microsoft.EntityFrameworkCore
+   Install-Package Microsoft.EntityFrameworkCore.SqlServer
+   Install-Package Microsoft.EntityFrameworkCore.Tools
+
 
 
 
