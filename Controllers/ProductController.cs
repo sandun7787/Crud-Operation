@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
 using Microsoft.AspNetCore.Hosting;
 using WebApplication1.Service;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace WebApplication1.Controllers
 {
@@ -116,10 +117,52 @@ namespace WebApplication1.Controllers
 
         }
 
+        return View(ProductDto);
+
+
+
+
 
 
             
 
     }
+        [HttpPost]
+    public IActionResult Edite(int Id , ProductDto)
+        {
+            var Product = _context.Products.Find(Id);
+
+            if(Product == null)
+            {
+                return View("index", "Products");
+            }
+
+            if(!ModelState.IsValid) {
+                return View(productDto);
+
+                product.ImagePath = $"/products/{newFileName}";
+
+                _context.Products.Add(product);
+                _context.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+
+        public IActionResult Edite(int Id)
+
+
+        {
+
+            var Product = _context.Products.Find(Id);
+
+            if (Product == null)
+            {
+
+                return RedirectToAction("index", "Products");
+            }
+        }
+    }
+
+
 }
 
