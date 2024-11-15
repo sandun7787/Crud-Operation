@@ -32,13 +32,25 @@
 
 <tbody>
     @foreach (var product in Model){
+     <tr>
         <td>@product.Id</td>
         <td>@product.Name</td>
         <td>@product.Brand</td>
         <td>@product.Category</td>
         <td>(@product.Price)</td>
-        
-    }
+        <td><img src="/product/@product.ImageFileName" width="100"/></td>
+        <td>@product.CreateAt.ToString("MM/dd/yyyy")</td>
+        <td style="white-space:nowrap">
+             <a class="btn btn-primary btn-sm" asp-controller="products" asp-action="Edit"
+              asp-rout-id="@product.Id">Edite</a>
 
+                <a class="btn btn-danger btn-sm" asp-controller="products" asp-action="Delete"
+                   asp-rout-id="@product.Id">Delete</a>
+
+
+        </td>
+    </tr>
+    }
+     
 </tbody>
 
